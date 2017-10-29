@@ -1,0 +1,10 @@
+login vms**
+crawlerb: ssh -i cityOfMelbourne.key ubuntu@115.146.92.106
+vm1: ssh -i cityOfMelbourne.key ubuntu@115.146.92.96
+vm2: ssh -i cityOfMelbourne.key ubuntu@115.146.92.100
+vm3: ssh -i cityOfMelbourne.key ubuntu@115.146.93.184
+*bridge link with vms mongodb
+crawlerb: ssh -f -i cityOfMelbourne.key -L localhost:15984:127.0.0.1:27017 ubuntu@115.146.92.106 -N
+vm1: ssh -f -i cityOfMelbourne.key -L localhost:15985:127.0.0.1:20000 ubuntu@115.146.92.96 -N
+vm2: ssh -f -i cityOfMelbourne.key -L localhost:15986:127.0.0.1:20000 ubuntu@115.146.92.100 -N
+vm3: ssh -f -i cityOfMelbourne.key -L localhost:15987:127.0.0.1:20000 ubuntu@115.146.93.184 -N

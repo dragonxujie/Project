@@ -1,0 +1,50 @@
+[INFO  - 2017-09-18T06:40:46.220Z] GhostDriver - Main - running on port 44097
+[INFO  - 2017-09-18T06:40:47.108Z] Session [4d8b8710-9c3c-11e7-ae82-5b4b846b1d32] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2017-09-18T06:40:47.108Z] Session [4d8b8710-9c3c-11e7-ae82-5b4b846b1d32] - page.customHeaders:  - {}
+[INFO  - 2017-09-18T06:40:47.109Z] Session [4d8b8710-9c3c-11e7-ae82-5b4b846b1d32] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"linux-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-09-18T06:40:47.109Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 4d8b8710-9c3c-11e7-ae82-5b4b846b1d32
+[ERROR - 2017-09-18T06:40:47.715Z] Session [4d8b8710-9c3c-11e7-ae82-5b4b846b1d32] - page.onError - msg: TypeError: null is not an object (evaluating 'c.classList')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-09-18T06:40:47.715Z] Session [4d8b8710-9c3c-11e7-ae82-5b4b846b1d32] - page.onError - stack:
+  h (https://static.licdn.com/scds/concat/common/js?h=3kp2aedn5pmamdr4dk4n8atur-3ti5bgrnb6idjtk0w4chaigxe-5hqr1i1uoezoj0z1s5gcxojf2-71o37tcjwl0ishto9izvyml3i-3bbdjshpw5ov0rwa8xe08tp97-cayct4cirf7n0f9z1xsg84g0q-dktkawxk7k8pixuh5g8z5ku32-213zbp2wzp99lviwl8g2cvq6i-1lknwtftishpdmobzm413yc7u-bcxa0v9ke411pjpmz4s239f9b-2s77lcl0ztx2c5fzyqvglptj1-bn7x20my6ejwhlgl10oqmhgst-8h514j3fiwnzuwkt66sbxsu8f-di2z9sra5co9la7ogqyesywin:48)
+  (anonymous function) (https://static.licdn.com/scds/concat/common/js?h=3kp2aedn5pmamdr4dk4n8atur-3ti5bgrnb6idjtk0w4chaigxe-5hqr1i1uoezoj0z1s5gcxojf2-71o37tcjwl0ishto9izvyml3i-3bbdjshpw5ov0rwa8xe08tp97-cayct4cirf7n0f9z1xsg84g0q-dktkawxk7k8pixuh5g8z5ku32-213zbp2wzp99lviwl8g2cvq6i-1lknwtftishpdmobzm413yc7u-bcxa0v9ke411pjpmz4s239f9b-2s77lcl0ztx2c5fzyqvglptj1-bn7x20my6ejwhlgl10oqmhgst-8h514j3fiwnzuwkt66sbxsu8f-di2z9sra5co9la7ogqyesywin:48)
+  (anonymous function) (https://static.licdn.com/scds/concat/common/js?h=3kp2aedn5pmamdr4dk4n8atur-3ti5bgrnb6idjtk0w4chaigxe-5hqr1i1uoezoj0z1s5gcxojf2-71o37tcjwl0ishto9izvyml3i-3bbdjshpw5ov0rwa8xe08tp97-cayct4cirf7n0f9z1xsg84g0q-dktkawxk7k8pixuh5g8z5ku32-213zbp2wzp99lviwl8g2cvq6i-1lknwtftishpdmobzm413yc7u-bcxa0v9ke411pjpmz4s239f9b-2s77lcl0ztx2c5fzyqvglptj1-bn7x20my6ejwhlgl10oqmhgst-8h514j3fiwnzuwkt66sbxsu8f-di2z9sra5co9la7ogqyesywin:48)
+  (anonymous function) (https://static.licdn.com/scds/concat/common/js?h=3kp2aedn5pmamdr4dk4n8atur-3ti5bgrnb6idjtk0w4chaigxe-5hqr1i1uoezoj0z1s5gcxojf2-71o37tcjwl0ishto9izvyml3i-3bbdjshpw5ov0rwa8xe08tp97-cayct4cirf7n0f9z1xsg84g0q-dktkawxk7k8pixuh5g8z5ku32-213zbp2wzp99lviwl8g2cvq6i-1lknwtftishpdmobzm413yc7u-bcxa0v9ke411pjpmz4s239f9b-2s77lcl0ztx2c5fzyqvglptj1-bn7x20my6ejwhlgl10oqmhgst-8h514j3fiwnzuwkt66sbxsu8f-di2z9sra5co9la7ogqyesywin:48)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-09-18T06:40:51.390Z] Session [4d8b8710-9c3c-11e7-ae82-5b4b846b1d32] - page.onError - msg: [object XMLHttpRequest]
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-09-18T06:40:51.390Z] Session [4d8b8710-9c3c-11e7-ae82-5b4b846b1d32] - page.onError - stack:
+  logError (https://static.licdn.com/sc/h/jm0tj6otsh8c5otva0j0z2nm,an5vyx0wi45a6eigwjtrk9xtr,bp2iganh4dmi9rrb9j1b720nw:99)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-09-18T06:42:04.633Z] Session [4d8b8710-9c3c-11e7-ae82-5b4b846b1d32] - page.onError - msg: [object XMLHttpRequest]
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-09-18T06:42:04.633Z] Session [4d8b8710-9c3c-11e7-ae82-5b4b846b1d32] - page.onError - stack:
+  logError (https://static.licdn.com/sc/h/1clxpcny17fqn13barefga7n7,111y1demczmfg1u9v5xebt6pm:5815)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-09-18T06:42:32.582Z] Session [4d8b8710-9c3c-11e7-ae82-5b4b846b1d32] - page.onError - msg: [object XMLHttpRequest]
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-09-18T06:42:32.582Z] Session [4d8b8710-9c3c-11e7-ae82-5b4b846b1d32] - page.onError - stack:
+  logError (https://static.licdn.com/sc/h/1clxpcny17fqn13barefga7n7,111y1demczmfg1u9v5xebt6pm:5815)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-09-18T06:43:08.255Z] Session [4d8b8710-9c3c-11e7-ae82-5b4b846b1d32] - page.onError - msg: [object XMLHttpRequest]
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-09-18T06:43:08.255Z] Session [4d8b8710-9c3c-11e7-ae82-5b4b846b1d32] - page.onError - stack:
+  logError (https://static.licdn.com/sc/h/1clxpcny17fqn13barefga7n7,111y1demczmfg1u9v5xebt6pm:5815)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-09-18T06:43:41.308Z] Session [4d8b8710-9c3c-11e7-ae82-5b4b846b1d32] - page.onError - msg: [object XMLHttpRequest]
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2017-09-18T06:43:41.308Z] Session [4d8b8710-9c3c-11e7-ae82-5b4b846b1d32] - page.onError - stack:
+  logError (https://static.licdn.com/sc/h/1clxpcny17fqn13barefga7n7,111y1demczmfg1u9v5xebt6pm:5815)
+
+  phantomjs://platform/console++.js:263 in error

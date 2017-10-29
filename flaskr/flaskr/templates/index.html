@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Dashboard | Klorofil - Free Bootstrap Dashboard Template</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- VENDOR CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/font-awesome/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/linearicons/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/chartist/css/chartist-custom.css') }}">
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/demo.css') }}">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+    <!-- ICONS -->
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ url_for('static', filename='img/apple-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ url_for('static', filename='img/favicon.png') }}">
+    <style>
+    #map {
+        height: 600px;
+        width: 100%;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- WRAPPER -->
+    <div id="wrapper">
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="brand">
+                <a href="index.html"><img src="{{ url_for('static', filename='img/logo-dark.png') }}" alt="Klorofil Logo" class="img-responsive logo"></a>
+            </div>
+            <div class="container-fluid">
+                <div class="navbar-btn">
+                    <button type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-arrow-left-circle"></i></button>
+                </div>
+                <form class="navbar-form navbar-left">
+                    <div class="input-group">
+                        <input type="text" value="" class="form-control" placeholder="Search dashboard...">
+                        <span class="input-group-btn"><button type="button" class="btn btn-primary">Go</button></span>
+                    </div>
+                </form>
+                <div class="navbar-btn navbar-btn-right">
+                    <a class="btn btn-success update-pro" href="#downloads/klorofil-pro-bootstrap-admin-dashboard-template/?utm_source=klorofil&utm_medium=template&utm_campaign=KlorofilPro" title="Upgrade to Pro" target="_blank"><i class="fa fa-rocket"></i> <span>UPGRADE TO PRO</span></a>
+                </div>
+                <div id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+								<i class="lnr lnr-alarm"></i>
+								<span class="badge bg-danger">5</span>
+							</a>
+                            <ul class="dropdown-menu notifications">
+                                <li><a href="#" class="notification-item"><span class="dot bg-warning"></span>System space is almost full</a></li>
+                                <li><a href="#" class="notification-item"><span class="dot bg-danger"></span>You have 9 unfinished tasks</a></li>
+                                <li><a href="#" class="notification-item"><span class="dot bg-success"></span>Monthly report is available</a></li>
+                                <li><a href="#" class="notification-item"><span class="dot bg-warning"></span>Weekly meeting in 1 hour</a></li>
+                                <li><a href="#" class="notification-item"><span class="dot bg-success"></span>Your request has been approved</a></li>
+                                <li><a href="#" class="more">See all notifications</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="lnr lnr-question-circle"></i> <span>Help</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Basic Use</a></li>
+                                <li><a href="#">Working With Data</a></li>
+                                <li><a href="#">Security</a></li>
+                                <li><a href="#">Troubleshooting</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="{{ url_for('static', filename='img/user.png') }}" class="img-circle" alt="Avatar"> <span>Samuel</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
+                                <li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>
+                                <li><a href="#"><i class="lnr lnr-cog"></i> <span>Settings</span></a></li>
+                                <li><a href="#"><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
+                            </ul>
+                        </li>
+                        <!-- <li>
+							<a class="update-pro" href="#downloads/klorofil-pro-bootstrap-admin-dashboard-template/?utm_source=klorofil&utm_medium=template&utm_campaign=KlorofilPro" title="Upgrade to Pro" target="_blank"><i class="fa fa-rocket"></i> <span>UPGRADE TO PRO</span></a>
+						</li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- END NAVBAR -->
+        <!-- LEFT SIDEBAR -->
+        <div id="sidebar-nav" class="sidebar">
+            <div class="sidebar-scroll">
+                <nav>
+                    <ul class="nav">
+                        <li><a href="{{ url_for('dashboard') }}" class="active"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+                        <li><a href="{{ url_for('show_chart') }}" class=""><i class="lnr lnr-chart-bars"></i> <span>Charts</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- END LEFT SIDEBAR -->
+        <!-- MAIN -->
+        <div class="main">
+            <!-- MAIN CONTENT -->
+            <div class="main-content">
+                <div class="container-fluid">
+                    <!-- OVERVIEW -->
+                    <div class="panel panel-headline">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">ABN Detail of Melbourne</h3>
+                            <p id='time' class="panel-subtitle">Period: Oct 14, 2016 - Oct 21, 2016</p>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="metric">
+                                        <span class="icon"><i class="fa fa-download"></i></span>
+                                        <p>
+                                            <span class="number">{{ comp_bag['comp_type'][-1][1]}}</span>
+                                            <span class="title">{{ comp_bag['comp_type'][-1][0]}}</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="metric">
+                                        <span class="icon"><i class="fa fa-shopping-bag"></i></span>
+                                        <p>
+                                            <span class="number">{{ comp_bag['comp_type'][-2][1]}}</span>
+                                            <span class="title">{{ comp_bag['comp_type'][-2][0]}}</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="metric">
+                                        <span class="icon"><i class="fa fa-eye"></i></span>
+                                        <p>
+                                            <span class="number">{{ comp_bag['comp_type'][-3][1]}}</span>
+                                            <span class="title">{{ comp_bag['comp_type'][-3][0]}}</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="metric">
+                                        <span class="icon"><i class="fa fa-bar-chart"></i></span>
+                                        <p>
+                                            <span class="number">{{ comp_bag['comp_type'][-4][1]}}</span>
+                                            <span class="title">{{ comp_bag['comp_type'][-4][0]}}</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <div id="map" class="ct-chart">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="weekly-summary text-right">
+                                        <span class="info-label">{{ comp_bag['employee_num'][-1][0]}}</span>
+                                        <span class="number">{{ comp_bag['employee_num'][-1][1]}} emplyees</span>
+
+                                    </div>
+                                    <div class="weekly-summary text-right">
+                                        <span class="info-label">{{ comp_bag['employee_num'][-2][0]}}</span>
+                                        <span class="number">{{ comp_bag['employee_num'][-2][1]}} emplyees</span> <span class="percentage"></span>
+
+                                    </div>
+                                    <div class="weekly-summary text-right">
+                                        <span class="info-label">{{ comp_bag['employee_num'][-3][0]}}</span>
+                                        <span class="number">{{ comp_bag['employee_num'][-3][1]}} emplyees</span> <span class="percentage"></span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END OVERVIEW -->
+                    <div class="copyrights">Collect from <a href="https://aurin.org.au/">AURIN</a></div>
+                </div>
+            </div>
+            <!-- END MAIN CONTENT -->
+        </div>
+        <!-- END MAIN -->
+        <div class="clearfix"></div>
+        <footer>
+            <div class="container-fluid">
+                <p class="copyright">&copy; 2017 Melbourne Proflie</p>
+            </div>
+        </footer>
+    </div>
+    <!-- END WRAPPER -->
+    <!-- Javascript -->
+    <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/jquery-slimscroll/jquery.slimscroll.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/chartist/js/chartist.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='scripts/klorofil-common.js') }}"></script>
+    <script>
+    function initMap() {
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 8,
+            center: { lat: -37.81, lng: 144.96 }
+        });
+        contentString = 'ABC'
+        // Create an array of alphabetical characters used to label the markers.
+        var titles = {{ comp_bag['name'] | safe }};
+        var markers = locations.map(function(location, i) {
+            marker = new google.maps.Marker({
+                position: location,
+                //label: labels[i % labels.length]
+                title: titles[i % titles.length][0],
+                animation: google.maps.Animation.DROP,
+            });
+            var infowindow = new google.maps.InfoWindow({
+                content: titles[i % titles.length][1]+' employees in total',
+                position: location
+            });
+            marker.addListener('click', function() {
+                infowindow.open(map, marker);
+            });
+            return marker
+        });
+
+
+        // Add a marker clusterer to manage the markers.
+        var markerCluster = new MarkerClusterer(map, markers, { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });
+
+    }
+
+    var locations = {{ comp_bag['coord'] | safe }}
+    </script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMYbPX0wLFtI7xwAHCLwebJiHDRSLus8I&callback=initMap">
+    </script>
+    <script>
+    document.getElementById("time").innerHTML = Date();
+    </script>
+</body>
+
+</html>
